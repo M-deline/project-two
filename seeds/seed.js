@@ -1,9 +1,19 @@
 const sequelize = require('../config/connection');
-const { User, Post } = require('../models');
+const { Drink } = require('../models');
 
-const userData = require('./userData.json');
-const postData = require('./postData.json');
+const drinkData = require('./drinkData.json');
 
-const seedDatabase = async () => { 
-    await sequelize.sync({ force: true });
-}
+const seedDatabase = async () => {
+  await sequelize.sync({ force: true });
+
+  for (const drink of drinkData) {
+
+    await Drink.create({
+      ...drink,
+    });
+  }
+
+  process.exit(0);
+};
+
+seedDatabase();
