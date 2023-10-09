@@ -5,31 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cocktail Search</title>
-  <link rel="stylesheet" href="/public/css/jass.css">
+  <link rel="stylesheet" href="/css/jass.css">
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      Cocktail Search!
-    </h1>
-    <img src="/images/cocktails_image_p2.jpeg" alt="image of cocktail" width="50px" height="50px">
-    <p>Search up any name of a cocktail to see results.</p>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">🍸</span>
+        <a href="/">Random Cocktail!</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/saveddrinks">my drinks</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
       
-  </footer>
+    </footer>
+  </div>
 
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
