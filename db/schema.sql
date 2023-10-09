@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS cocktailsearch_db;
-CREATE DATABASE cocktailsearch_db;
+DROP DATABASE IF EXISTS cocktail_db;
+CREATE DATABASE cocktail_db;
