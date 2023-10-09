@@ -12,6 +12,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/login', async (req, res) => {
+  try {
+
+
+    res.render('login');
+  } catch (error) {
+    console.error(error);
+  }
+});
+
 const url = 'https://the-cocktail-db.p.rapidapi.com/random.php';
 const options = {
   method: 'GET',
