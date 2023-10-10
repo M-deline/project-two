@@ -23,3 +23,38 @@ header, .project:not(:last-child) {
     margin-left: -5px;
   }
   
+  * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  .btn {
+    background-color: orange;
+    border: solid black 1px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+  }
+
+  .btn:hover {
+    color: rgb(227, 79, 0);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+  }
+  #form {
+    padding: 50px 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+    width: 25%;
+    height: 25%;
+}
+
+
+  
+  
