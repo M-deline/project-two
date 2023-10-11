@@ -15,7 +15,7 @@ function newDrink() {
   
   
   
-      const response = await fetch('http://localhost:3001/saveddrinks', {
+      const response = await fetch('/api/drink/saveddrinks', {
         method: 'POST',
         body: JSON.stringify({ name, steps}),
         headers: {
