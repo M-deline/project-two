@@ -18,7 +18,9 @@ Future development would look like having more endpoints from the API where user
 ## Contributions
 
 ## Credit 
+- “Free API.” Free API | TheCocktailDB.Com, www.thecocktaildb.com/api.php. Accessed 28 Sept. 2023. 
 - MozDevNet. “Express Tutorial Part 4: Routes and Controllers - Learn Web Development: MDN.” Learn Web Development | MDN, developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes. Accessed 2 Oct. 2023. 
 - Noob-Dev95Noob-Dev95 and Matt DavisMatt Davis. “How Put API Key on Env Files in a Node.Js App?” Stack Overflow, 1 Apr. 1968, stackoverflow.com/questions/70637027/how-put-api-key-on-env-files-in-a-node-js-app. Accessed 6 Oct. 2023.
+- thecocktaildb. “The Cocktail Db API Documentation (Thecocktaildb): Rapidapi.” RapidAPI, rapidapi.com/thecocktaildb/api/the-cocktail-db. Accessed 28 Sept. 2023. 
 - University of Denver (Module 14)
 
