@@ -140,6 +140,13 @@ sup {
  */
 img {
   border-style: none;
+  align-items: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
 }
 
 /* Forms
@@ -356,8 +363,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: 16px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
   color: #1a1a1a;
 }
 
@@ -376,7 +383,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 45px;
 }
 
 h3 {
@@ -394,9 +401,9 @@ h5 {
 h6 {
   font-size: 1rem;
 }
-
+/* font size bigger so user can read better */
 p {
-  font-size: 1.1rem;
+  font-size: 23px;
   margin: 0 0 1rem;
   line-height: 1.5;
 }
@@ -987,6 +994,13 @@ a:hover {
 .btn:hover {
   background-color: #cecece;
 }
+/* make so that all the buttons have same default */
+nav:hover {
+  font-style: italic;
+}
+a:hover {
+  font-style: italic; 
+}
 
 .btn.btn-squared {
   border-radius: 0;
@@ -1012,18 +1026,26 @@ a:hover {
   background-color: #2d3e50;
   color: #d9e9e8;
 }
-
+/* change to default for hovering like other buttons */
+/* add cursor pointer for user */
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  font-style: italic;
+  background-color: #417dc2;
+  box-shadow: 0 5px 5px #8caacc;
+  cursor: pointer;
 }
-
 .btn.btn-danger {
   background-color: #e64c66;
   color: #ffffff;
+  padding: 15px 40px;
 }
-
+/* add hover effect and cursor change for user convenience add italics so user can see what is selected */
 .btn.btn-danger:hover {
-  background-color: #ee8294;
+  background-color: #e64c66;
+  padding: 15px 40px;
+  box-shadow: 0 5px 15px #ee8294;
+  font-style: italic;
+  cursor:pointer;
 }
 
 .btn.btn-info {
@@ -1078,6 +1100,7 @@ a:hover {
 
 .btn.btn-link:hover {
   background-color: #31a9e1;
+  font-style: italic;
 }
 
 .card {
@@ -1702,4 +1725,19 @@ form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+}
+
+/* center button */
+.button-adj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-content-lg-center {
+  justify-content: center;
+}
+
+.obj-steps {
+  font-weight: normal;
 }
