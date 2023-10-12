@@ -12,4 +12,24 @@ router.post('/saveddrinks', withAuth, async (req, res) => {
   }
 });
 
+router.delete('/saveddrinks', async (req, res) => {
+  try {
+    const drinkData = await Drink.destroy({
+      where: {
+        id: req.params.id,
+     
+      },
+    });
+
+    if (!drinkData) {
+      res.status(404).json({ message: 'No drinkfound with this id!' });
+      return;
+    }
+
+    res.status(200).json(drinkData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

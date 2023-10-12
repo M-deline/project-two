@@ -62,4 +62,18 @@ router.get('/saveddrinks', async (req, res) => {
   }
 });
 
+router.get('/saveddrinks/:id', async (req, res) => {
+  try {
+    const drinkData = await Drink.findByPk(req.params.id);
+
+    const drink = drinkData.get({ plain: true });
+
+    res.render('recipe', {
+      ...drink
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
