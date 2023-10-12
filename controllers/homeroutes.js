@@ -62,4 +62,6 @@ router.get('/saveddrinks', async (req, res) => {
   }
 });
 
+application.use("/images", express.static(path.jopin(__dirname, "public/images")))
+
 module.exports = router;

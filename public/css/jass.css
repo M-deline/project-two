@@ -987,6 +987,13 @@ a:hover {
 .btn:hover {
   background-color: #cecece;
 }
+/* make so that all the buttons have same default */
+nav:hover {
+  font-style: italic;
+}
+a:hover {
+  font-style: italic; 
+}
 
 .btn.btn-squared {
   border-radius: 0;
