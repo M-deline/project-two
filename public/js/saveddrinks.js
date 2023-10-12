@@ -1,22 +1,23 @@
 
 const deleteDrink = async (event) => {
-    console.log('chacl');
-    const id = event.target.getAttribute('data-id');
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+        
+        console.log(id);
+        const response = await fetch(`/api/drink/saveddrinks/${id}`, {
+            method: 'DELETE',
+        });
 
-    const response = await fetch(`/api/drink/saveddrinks`, {
-        method: 'DELETE',
-    });
-
-    if (response.ok) {
-        document.location.replace('/');
-    } else {
-        alert('Failed to delete project');
+        if (response.ok) {
+            document.location.replace('/saveddrinks');
+        } else {
+            alert('Failed to delete project');
+        }
     }
-
 };
 
 
 document
-    .querySelector('.drink-del')
+    .querySelector('.deleteBTN')
     .addEventListener('click', deleteDrink);
 

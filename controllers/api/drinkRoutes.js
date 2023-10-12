@@ -12,7 +12,7 @@ router.post('/saveddrinks', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/saveddrinks', async (req, res) => {
+router.delete('/saveddrinks/:id', async (req, res) => {
   try {
     const drinkData = await Drink.destroy({
       where: {
