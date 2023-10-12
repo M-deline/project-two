@@ -12,14 +12,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/login', async (req, res) => {
-  try {
-
-
-    res.render('login');
-  } catch (error) {
-    console.error(error);
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/saveddrinks');
+    return;
   }
+
+  res.render('login');
 });
 
 const url = 'https://the-cocktail-db.p.rapidapi.com/random.php';

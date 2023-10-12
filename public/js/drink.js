@@ -12,9 +12,9 @@ function newDrink() {
   
       const name = event.target.getAttribute('data-name');
       const steps = event.target.getAttribute('data-steps');
-  
-  
-  
+      
+      
+      
       const response = await fetch('/api/drink/saveddrinks', {
         method: 'POST',
         body: JSON.stringify({ name, steps}),
