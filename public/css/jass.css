@@ -1027,22 +1027,25 @@ a:hover {
   color: #d9e9e8;
 }
 /* change to default for hovering like other buttons */
+/* add cursor pointer for user */
 .btn.btn-primary:hover {
   font-style: italic;
   background-color: #417dc2;
   box-shadow: 0 5px 5px #8caacc;
+  cursor: pointer;
 }
 .btn.btn-danger {
   background-color: #e64c66;
   color: #ffffff;
   padding: 15px 40px;
 }
-/* add hover effect for user convenience add italics so user can see what is selected */
+/* add hover effect and cursor change for user convenience add italics so user can see what is selected */
 .btn.btn-danger:hover {
   background-color: #e64c66;
   padding: 15px 40px;
   box-shadow: 0 5px 15px #ee8294;
   font-style: italic;
+  cursor:pointer;
 }
 
 .btn.btn-info {
