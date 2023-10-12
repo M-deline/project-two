@@ -27,33 +27,19 @@ header, .project:not(:last-child) {
     font-family: Verdana, Geneva, Tahoma, sans-serif
   }
 
-  .btn {
-    background-color: orange;
-    border: solid black 1px;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-  }
-
-  .btn:hover {
-    color: rgb(227, 79, 0);
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
-  }
-  #form {
-    padding: 50px 10px;
-    width: 100%;
-    font-size: 20px;
+.btn btn-lg btn-danger col-md-2 glow-button {
+  box-shadow: black;
 }
-
-img {
+/* img {
     object-fit: cover;
     object-position: center;
     width: 25%;
     height: 25%;
-}
+} */
 
+/* So have the recipe/instructions appear in normal font not bold
+The name of the drink should be as is, bold and bifger font so that people are aware that's the name of the drink
+Maybe try to get the login to be in the left side instead??
+And then have the New Drink/Save Drink in the center and appear larger so it looks like a generator more */
 
   
