@@ -1012,11 +1012,12 @@ a:hover {
   background-color: #2d3e50;
   color: #d9e9e8;
 }
-
+/* change to default for hovering like other buttons */
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  font-style: italic;
+  background-color: #417dc2;
+  box-shadow: 0 5px 5px #8caacc;
 }
-
 .btn.btn-danger {
   background-color: #e64c66;
   color: #ffffff;
@@ -1082,6 +1083,7 @@ a:hover {
 
 .btn.btn-link:hover {
   background-color: #31a9e1;
+  font-style: italic;
 }
 
 .card {

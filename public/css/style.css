@@ -23,11 +23,6 @@ header, .project:not(:last-child) {
     margin-left: -5px;
   }
   
-  * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-  }
-
-
 /* So have the recipe/instructions appear in normal font not bold
 The name of the drink should be as is, bold and bifger font so that people are aware that's the name of the drink
 Maybe try to get the login to be in the left side instead??
