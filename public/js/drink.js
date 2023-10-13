@@ -19,17 +19,36 @@ const saveDrink = async (event) => {
 
   const response = await fetch('/api/drink/saveddrinks', {
     method: 'POST',
-    body: JSON.stringify({ name, steps, ing, image }),
+    body: JSON.stringify({ name, steps, image }),
     headers: {
       'Content-Type': 'application/json',
     },
   });
-
+  
+  for (let i=0; i< ing.length; i++) {
+    const ingredient = ing[i];
+    
+    const response = await fetch('/api/drink/saveddrinks', {
+      method: 'POST',
+      body: JSON.stringify({ ingredient }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+    
+    } else {
+      alert('Failed to save drink');
+    }
+  }
+  
   if (response.ok) {
     document.location.replace('/saveddrinks');
   } else {
     alert('Failed to save drink');
   }
+
+
 
 };
 
