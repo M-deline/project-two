@@ -17,7 +17,7 @@ This was a very challenging project since it used a lot of technologies to creat
 Future development would look like having more endpoints from the API where users are able to do more with the application. We could implement a share button for users if they liked a specific drink to share with their friends. There could be a featured cocktail on a Saturday or Friday so that users can try a cocktail during the weekend or we could have a section for cocktails you might like (since you liked these ones). We could also expand and have the application display information for a variety of beverages not just cocktails. We would also like to show the date (day and Month) for users so they know how close it is to weekend and for user convenience.  
 ## Contributions
 [Link to Amy's GitHub](https://github.com/Akleynhans)
-[Link to Madeline's GitHub] (https://github.com/M-deline)
+[Link to Madeline's GitHub](https://github.com/M-deline)
 ## Credit 
 - “Free API.” Free API | TheCocktailDB.Com, www.thecocktaildb.com/api.php. Accessed 28 Sept. 2023. 
 - MozDevNet. “Date - Javascript: MDN.” JavaScript | MDN, developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date. Accessed 12 Oct. 2023. 
