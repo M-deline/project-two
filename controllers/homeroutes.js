@@ -47,7 +47,7 @@ router.get('/drink', async (req, res) => {
       }
     }
 
-    const objs = [{name: result.drinks[0].strDrink, steps: result.drinks[0].strInstructions, ing: measIng}];
+    const objs = [{name: result.drinks[0].strDrink, steps: result.drinks[0].strInstructions, ing: measIng, image: result.drinks[0].strDrinkThumb}];
 
 
 
