@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Drink } = require('../models');
+const { Drink, Ingt } = require('../models');
 
 
 router.get('/', async (req, res) => {
@@ -77,11 +77,14 @@ router.get('/saveddrinks', async (req, res) => {
 router.get('/saveddrinks/:id', async (req, res) => {
   try {
     const drinkData = await Drink.findByPk(req.params.id);
+    const ingtData = await Ingt.findAll();
 
     const drink = drinkData.get({ plain: true });
+    const ingredients = ingtData.map((ingredient) => ingredient.get({ plain: true }));
 
     res.render('recipe', {
-      ...drink
+      ...drink,
+      ingredients
     });
   } catch (err) {
     res.status(500).json(err);

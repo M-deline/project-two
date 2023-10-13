@@ -15,9 +15,10 @@ const saveDrink = async (event) => {
   const ing = event.target.getAttribute('data-ing');
   const image = event.target.getAttribute('data-image');
 
+  const ingArray = ing.split(",");
+  console.log(ingArray);
 
-
-  const response = await fetch('/api/drink/saveddrinks', {
+  const response1 = await fetch('/api/drink/saveddrinks', {
     method: 'POST',
     body: JSON.stringify({ name, steps, image }),
     headers: {
@@ -25,10 +26,11 @@ const saveDrink = async (event) => {
     },
   });
   
-  for (let i=0; i< ing.length; i++) {
-    const ingredient = ing[i];
-    
-    const response = await fetch('/api/drink/saveddrinks', {
+  for (let i=0; i< ingArray.length; i++) {
+    const ingredient = ingArray[i];
+  
+    console.log(ingredient);
+    const response = await fetch('/api/ingt/saveddrinks/:id', {
       method: 'POST',
       body: JSON.stringify({ ingredient }),
       headers: {
@@ -36,14 +38,14 @@ const saveDrink = async (event) => {
       },
     });
     if (response.ok) {
-    
+     
     } else {
       alert('Failed to save drink');
     }
   }
   
-  if (response.ok) {
-    document.location.replace('/saveddrinks');
+  if (response1.ok) {
+    // document.location.replace('/saveddrinks');
   } else {
     alert('Failed to save drink');
   }

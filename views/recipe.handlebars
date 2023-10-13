@@ -1,9 +1,11 @@
 <div class="text-center">
   <h2>{{name}}</h2>
-  {{#each obj.ing as |ing|}}
-  <p>{{ing}}</p>
+  <img src={{image}} alt="image of drink">
+  <h3>Ingredients:</h3>
+  {{#each ingredients as |ingredient|}}
+  <p>{{ingredient.ingredient}}</p>
   {{/each}}
-
+  <br><br><h3>Steps:</h3>
   <p>{{steps}}</p>
 
 
