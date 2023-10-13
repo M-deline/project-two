@@ -1,6 +1,6 @@
 <!-- Loop over each user object -->
 {{#each objs as |obj| }}
-<div class="row align-center justify-center mb-5 ">
+<div class="row align-center center mb-5 ">
   <div class="col-md-6 align-center ">
     <!-- Render user-specific data with Handlebars.js expressions -->
     <h2> {{obj.name}}</h2>
@@ -19,7 +19,7 @@
   <div class="drink-new">
     <button class="btn btn-sm btn-danger">New Drink</button>
   </div>
-  <div class="drink-save">
+  <div class="drink-save m-2">
     <button class="btn btn-sm btn-danger" data-name="{{obj.name}}" data-steps="{{obj.steps}}">Save Drink</button>
   </div>
 </div>
