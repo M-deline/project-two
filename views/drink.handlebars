@@ -6,7 +6,10 @@
     <h2> {{obj.name}}</h2>
   </div>
   <div class="col-md-6">
-    <h3>{{obj.steps}}</h3>
+    {{#each obj.ing as |ing|}}
+    <h3>{{ing}}</h3>
+    {{/each}}
+   <br><br> <h3>{{obj.steps}}</h3>
   </div>
   <div class="drink-new">
     <button class="btn btn-sm btn-danger">New Drink</button>

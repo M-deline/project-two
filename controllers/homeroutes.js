@@ -46,9 +46,9 @@ router.get('/drink', async (req, res) => {
         measIng.push( [measurements[i], ingedients[i]].join(""))
       }
     }
-    console.log(measIng);
+
     const objs = [{name: result.drinks[0].strDrink, steps: result.drinks[0].strInstructions, ing: measIng}];
-    console.log(objs);
+
 
 
     res.render('drink', { objs });
