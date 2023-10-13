@@ -12,12 +12,14 @@ const saveDrink = async (event) => {
 
   const name = event.target.getAttribute('data-name');
   const steps = event.target.getAttribute('data-steps');
+  const ing = event.target.getAttribute('data-ing');
+  const image = event.target.getAttribute('data-image');
 
 
 
   const response = await fetch('/api/drink/saveddrinks', {
     method: 'POST',
-    body: JSON.stringify({ name, steps }),
+    body: JSON.stringify({ name, steps, ing, image }),
     headers: {
       'Content-Type': 'application/json',
     },
