@@ -35,8 +35,20 @@ router.get('/drink', async (req, res) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    const objs = [{name: result.drinks[0].strDrink, steps: result.drinks[0].strInstructions}];
+    const measurements = [result.drinks[0].strMeasure1, result.drinks[0].strMeasure2, result.drinks[0].strMeasure3, result.drinks[0].strMeasure4, result.drinks[0].strMeasure5, result.drinks[0].strMeasure6,result.drinks[0].strMeasure7,result.drinks[0].strMeasure8, result.drinks[0].strMeasure9, result.drinks[0].strMeasure10, result.drinks[0].strMeasure11, result.drinks[0].strMeasure12, result.drinks[0].strMeasure13, result.drinks[0].strMeasure14, result.drinks[0].strMeasure15];
+    
+    const ingedients = [result.drinks[0].strIngredient1, result.drinks[0].strIngredient2, result.drinks[0].strIngredient3, result.drinks[0].strIngredient4, result.drinks[0].strIngredient5, result.drinks[0].strIngredient6, result.drinks[0].strIngredient7, result.drinks[0].strIngredient8, result.drinks[0].strIngredient9, result.drinks[0].strIngredient10, result.drinks[0].strIngredient11, result.drinks[0].strIngredient12, result.drinks[0].strIngredient13, result.drinks[0].strIngredient14, result.drinks[0].strIngredient15]
 
+    measIng = [];
+
+    for (let i=0; i< measurements.length; i++) {
+      if (measurements[i] !== null) {
+        measIng.push( [measurements[i], ingedients[i]].join(""))
+      }
+    }
+    console.log(measIng);
+    const objs = [{name: result.drinks[0].strDrink, steps: result.drinks[0].strInstructions, ing: measIng}];
+    console.log(objs);
 
 
     res.render('drink', { objs });
