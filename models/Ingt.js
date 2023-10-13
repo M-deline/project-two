@@ -15,6 +15,15 @@ Ingt.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    drink_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'drink',
+        key: 'id',
+        unique: false
+      }
+    }
 
 
   },
