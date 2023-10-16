@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Drink, Ingt } = require('../models');
+const { Drink } = require('../models');
 
 
 router.get('/', async (req, res) => {

@@ -27,26 +27,9 @@ const saveDrink = async (event) => {
     },
   });
   
-  // for (let i=0; i< ingArray.length; i++) {
-  //   const ingredient = ingArray[i];
-  
-  //   console.log(ingredient);
-  //   const response = await fetch('/api/drink', {
-  //     method: 'POST',
-  //     body: JSON.stringify({ ingredient }),
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   });
-  //   if (response.ok) {
-     
-  //   } else {
-  //     alert('Failed to save drink');
-  //   }
-  // }
   
   if (response1.ok) {
-    // document.location.replace('/saveddrinks');
+    document.location.replace('/saveddrinks');
   } else {
     alert('Failed to save drink');
   }
