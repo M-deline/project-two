@@ -15,11 +15,9 @@ const saveDrink = async (event) => {
   const ingredient = event.target.getAttribute('data-ing');
   const image = event.target.getAttribute('data-image');
 
-  const ingArray = ingredient.split(",");
-  console.log(ingArray);
  
 
-  const response1 = await fetch('/api/drink/saveddrinks', {
+  const response = await fetch('/api/drink/saveddrinks', {
     method: 'POST',
     body: JSON.stringify({ name, steps, image, ingredient}),
     headers: {
@@ -28,7 +26,7 @@ const saveDrink = async (event) => {
   });
   
   
-  if (response1.ok) {
+  if (response.ok) {
     document.location.replace('/saveddrinks');
   } else {
     alert('Failed to save drink');

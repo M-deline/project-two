@@ -17,6 +17,7 @@ const seedDatabase = async () => {
 
     await Drink.create({
       ...drink,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
