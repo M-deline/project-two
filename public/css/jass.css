@@ -149,7 +149,11 @@ img {
   margin-right: auto;
   width: 25%;
 }
-
+#fix-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Forms
    ========================================================================== */
 /**
