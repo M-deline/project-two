@@ -74,6 +74,7 @@ router.get('/saveddrinks', async (req, res) => {
   }
 });
 
+
 router.get('/saveddrinks/:id', async (req, res) => {
   try {
     const drinkData = await Drink.findByPk(req.params.id);
@@ -93,5 +94,6 @@ router.get('/saveddrinks/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;

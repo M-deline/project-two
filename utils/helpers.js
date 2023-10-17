@@ -1,15 +1,17 @@
-module.exports = {
-    get_emoji: () => {
-      const randomNum = Math.random();
-      let book = "📗";
-  
-      if (randomNum > 0.7) {
-        book = "📘";
-      } else if (randomNum > 0.4) {
-        book = "📙";
-      }
-  
-      return `<span for="img" aria-label="book">${book}</span>`;
-    },
-  };
-  
+//future development
+
+// function getDate(mm) {
+//     var daysOfWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+//     var allMonths = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+//     Date.prototype.dayName = function() {
+//         return daysOfWeek[this.showDay()];
+//     };
+//     Date.prototype.monthName = function() {
+//         return allMonths[this.showMonth()];
+//     };
+// }
+
+// var showDate = new Date();
+// var day = now.dayName();
+// var month = now.monthName();
