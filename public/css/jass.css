@@ -1113,13 +1113,15 @@ a:hover {
 }
 
 .btn.btn-link {
-  background-color: #1b89bc;
-  color: #ffffff;
+  background-color: transparent;
+  color: #1c8dc2;
+  font-size: 19px;
 }
 
 .btn.btn-link:hover {
-  background-color: #31a9e1;
   font-style: italic;
+  text-decoration: underline;
+  color: #065b83;
 }
 
 .card {
