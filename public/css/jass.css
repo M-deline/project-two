@@ -141,6 +141,7 @@ sup {
 img {
   border-style: none;
   align-items: center;
+  justify-items: center;
 }
 .center {
   display: block;
@@ -148,7 +149,12 @@ img {
   margin-right: auto;
   width: 25%;
 }
-
+/* make sure that image is centered as well for user convenience */
+#fix-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Forms
    ========================================================================== */
 /**
@@ -404,9 +410,18 @@ h6 {
 /* font size bigger so user can read better */
 p {
   font-size: 23px;
-  margin: 0 0 1rem;
-  line-height: 1.5;
+  /* margin: 0 0 1rem;
+  line-height: 1.5; */
+  text-align:center; 
+  /* padding: 45px;
 }
+#change {
+  float: right;
+  /* max-width: 100%;
+  width: 500px; */
+  font-weight: lighter;
+}
+
 
 ul,
 ol,
@@ -975,7 +990,11 @@ a:hover {
 .display-flex {
   display: flex !important;
 }
+#center-button {
+  align-items: center;
+  text-align: center;
 
+}
 .btn {
   text-align: center;
   display: inline-block;

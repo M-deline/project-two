@@ -1,30 +1,30 @@
 <!-- Loop over each user object -->
 {{#each objs as |obj| }}
+<div class="container">
+  <h2 class="text-center"> {{obj.name}}</h2>
+  <div id="fix-image" class="row text-center">
+    <div id="fix-image" class="col-md-6">
+      <img src={{obj.image}} alt="image of drink" width="200" class="id">
+    </div>
+    <div>
+      {{#each obj.ing as |ing|}}
+      <p id="change">{{ing}}</p>
+      {{/each}}
+      <br><br>
+      <p id="change">{{obj.steps}}</p>
+    </div>
+    <div class="row d-flex align-center mb-5">
+      <div class="drink-new text-center">
+        <button id="center-button" class="btn btn-lg btn-danger">New Drink</button>
+      </div>
+      <div class="drink-save m-2 text-center">
+        <button id="center-button" class="btn btn-lg btn-danger" data-name="{{obj.name}}" data-steps="{{obj.steps}}"
+          data-ing="{{obj.ing}}" data-image="{{obj.image}}">Save Drink</button>
 
-<div class="row align-center center mb-5 ">
-  <div class="col-md-6 align-center ">
-    <!-- Render user-specific data with Handlebars.js expressions -->
-    <h2> {{obj.name}}</h2>
-    <img src={{obj.image}} alt="image of drink" width="200">
-  </div>
-  <div class="col-md-6">
-    {{#each obj.ing as |ing|}}
-    <h3>{{ing}}</h3>
+      </div>
+    </div>
     {{/each}}
-    <br><br>
-    <h3>{{obj.steps}}</h3>
-  </div>
-
-</div>
-<div class="row align-center mb-5 ">
-  <div class="drink-new">
-    <button class="btn btn-sm btn-danger">New Drink</button>
-  </div>
-  <div class="drink-save m-2">
-    <button class="btn btn-sm btn-danger" data-name="{{obj.name}}" data-steps="{{obj.steps}}" data-ing="{{obj.ing}}" data-image="{{obj.image}}">Save Drink</button>
-
   </div>
 </div>
-{{/each}}
 
 <script src="./js/drink.js"></script>
