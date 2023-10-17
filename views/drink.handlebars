@@ -13,20 +13,18 @@
       <br><br>
       <p id="change">{{obj.steps}}</p>
     </div>
-  </div>
-</div>
+    <div class="row d-flex align-center mb-5">
+      <div class="drink-new text-center">
+        <button id="center-button" class="btn btn-lg btn-danger">New Drink</button>
+      </div>
+      <div class="drink-save m-2 text-center">
+        <button id="center-button" class="btn btn-lg btn-danger" data-name="{{obj.name}}" data-steps="{{obj.steps}}"
+          data-ing="{{obj.ing}}" data-image="{{obj.image}}">Save Drink</button>
 
-</div>
-<div class="row d-flex align-center mb-5">
-  <div class="drink-new">
-    <button class="btn btn-lg btn-danger p-3 mt-3">New Drink</button>
-  </div>
-  <div class="drink-save m-2">
-    <button class="btn btn-lg btn-danger p-3 mt-3" data-name="{{obj.name}}" data-steps="{{obj.steps}}"
-      data-ing="{{obj.ing}}" data-image="{{obj.image}}">Save Drink</button>
-
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>
-{{/each}}
 
 <script src="./js/drink.js"></script>

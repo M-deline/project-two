@@ -149,6 +149,7 @@ img {
   margin-right: auto;
   width: 25%;
 }
+/* make sure that image is centered as well for user convenience */
 #fix-image {
   display: flex;
   align-items: center;
@@ -989,7 +990,11 @@ a:hover {
 .display-flex {
   display: flex !important;
 }
+#center-button {
+  align-items: center;
+  text-align: center;
 
+}
 .btn {
   text-align: center;
   display: inline-block;
