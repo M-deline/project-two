@@ -2,7 +2,7 @@
 function getDrink() {
 
 
-    document.location.replace('/drink');
+  document.location.replace('/drink');
 };
 
 

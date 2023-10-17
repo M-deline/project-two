@@ -22,6 +22,10 @@ header, .project:not(:last-child) {
     font-weight: bold;
     margin-left: -5px;
   }
-  
+
+
+  .center {
+    justify-content: center;
+  }
   
 
