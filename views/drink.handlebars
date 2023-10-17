@@ -7,10 +7,12 @@
       <img src={{obj.image}} alt="image of drink" width="200" class="id">
     </div>
     <div>
+    <br><h3>Ingredients:</h3>
       {{#each obj.ing as |ing|}}
       <p id="change">{{ing}}</p>
       {{/each}}
       <br><br>
+      <h3>Steps:</h3>
       <p id="change">{{obj.steps}}</p>
     </div>
     <br></br>
