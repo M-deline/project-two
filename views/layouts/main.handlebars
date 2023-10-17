@@ -16,13 +16,11 @@
         <a href="/">Random Cocktail!</a>
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
+
         <a href="/saveddrinks">my drinks</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
         <a href="/login">login</a>
-        {{/if}}
+        <button class="no-button" id="logout">logout</button>
+     
       </nav>
     </header>
     <main class="container container-fluid mt-5">

@@ -58,20 +58,28 @@ router.get('/drink', async (req, res) => {
 });
 
 router.get('/saveddrinks', async (req, res) => {
-  try {
-    // Get all drinks, sorted by name
-    const drinkData = await Drink.findAll({
-   
-    });
 
-    // Serialize user data so templates can read it
-    const drinks = drinkData.map((drink) => drink.get({ plain: true }));
+  if (req.session.logged_in) {
 
-    // Pass serialized data into Handlebars.js template
-    res.render('saveddrinks', { drinks });
-  } catch (err) {
-    res.status(500).json(err);
+    try {
+      // Get all drinks, sorted by name
+      const drinkData = await Drink.findAll({
+     
+      });
+  
+      // Serialize user data so templates can read it
+      const drinks = drinkData.map((drink) => drink.get({ plain: true }));
+  
+      // Pass serialized data into Handlebars.js template
+      res.render('saveddrinks', { drinks });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  } else {
+    res.redirect('/login');
+    return;
   }
+
 });
 
 router.get('/saveddrinks/:id', async (req, res) => {
